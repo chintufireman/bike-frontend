@@ -1,0 +1,34 @@
+.outer_container{
+    background: #ccc;
+    height: 100px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inner_container{
+    border: 2px solid black;
+    margin: 2px;
+    padding: 2px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.outer_container .inner_container nav, .outer_container .inner_container nav ul{
+    width: 100%;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.outer_container .inner_container nav ul li{
+    font-size: 1.5em;
+    color: black;
+    transition: 0.5s;
+}
+.outer_container .inner_container nav ul li:hover{
+    background: green;
+}
