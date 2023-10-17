@@ -1,0 +1,75 @@
+.outer_container {
+  display: flex;
+  border: 2px solid black;
+  height: 100%;
+  min-height: 100vh;
+}
+.inner_container {
+  display: flex;
+  border: 2px solid black;
+  top: 20px;
+  left: 20px;
+  bottom: 20px;
+  position: fixed;
+  background: #4d5bf9;
+  box-sizing: initial;
+  border-radius: 10px;
+  transition: width 0.5s;
+  width: 300px;
+}
+.outer_container .inner_container ul {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 40px;
+  padding-left: 5px;
+}
+.outer_container .inner_container ul li{
+    position: relative;
+    list-style: none;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.outer_container .inner_container ul li.active{
+    background: #fff;
+}
+
+.outer_container .inner_container ul li a{
+    position: relative;
+    display: block;
+    /* border: 2px solid black; */
+    text-decoration: none;
+    color: #fff;
+    width: 100%;
+    display: flex;
+    
+}
+.outer_container .inner_container ul li.active a{
+    color: #333;
+}
+.outer_container .inner_container ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 70px;
+    text-align: center;
+    /* border: 2px solid red; */
+}
+
+.outer_container .inner_container ul li a .icon ion-icon{
+    font-size: 1.5em;
+}
+
+.outer_container .inner_container ul li a .title{
+    position: relative;
+    display: block;
+    /* border: 2px solid red; */
+    text-align: center;
+    padding-left: 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: normal;
+}
