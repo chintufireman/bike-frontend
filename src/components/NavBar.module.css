@@ -1,5 +1,5 @@
 .outer_container{
-    background: #ccc;
+    background: #4d5bf9;
     height: 100px;
     width: 100%;
     margin: 0;
@@ -7,9 +7,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
 }
 .inner_container{
-    border: 2px solid black;
+    /* border: 2px solid black; */
     margin: 2px;
     padding: 2px;
     width: 100%;
@@ -28,6 +29,7 @@
     font-size: 1.5em;
     color: black;
     transition: 0.5s;
+    cursor: pointer;
 }
 .outer_container .inner_container nav ul li:hover{
     background: green;

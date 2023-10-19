@@ -7,8 +7,8 @@
 .inner_container {
   display: flex;
   /* border: 2px solid black; */
-  top: 20px;
-  left: 20px;
+  top: 0px;
+  left: 0px;
   bottom: 20px;
   position: fixed;
   background: #4d5bf9;
@@ -30,6 +30,8 @@
   width: 100%;
   background: #fff;
   display: none;
+  transition: 0.5s;
+
 }
 
 .outer_container .inner_container ul li b:nth-child(1)::before {
@@ -41,6 +43,7 @@
   height: 100%;
   background: #4d5bf9;
   border-bottom-right-radius: 20px;
+  transition: 0.5s;
 }
 
 .outer_container .inner_container ul li b:nth-child(2) {
@@ -50,6 +53,8 @@
   width: 100%;
   background: #fff;
   display: none;
+  transition: 0.5s;
+
 }
 
 .outer_container .inner_container ul li b:nth-child(2)::before {
@@ -61,11 +66,15 @@
   height: 100%;
   background: #4d5bf9;
   border-top-right-radius: 20px;
+  transition: 0.5s;
+
 }
 
 .outer_container .inner_container ul li.active b:nth-child(1),
 .outer_container .inner_container ul li.active b:nth-child(2) {
     display: block;
+    transition: 0.5s;
+
 }
 
 .outer_container .inner_container ul {

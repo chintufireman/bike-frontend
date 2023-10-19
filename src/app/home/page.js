@@ -8,8 +8,9 @@ const Page = () => {
   return (
     <>
       <div className="">
+      <NavBar></NavBar>
         <SideBar></SideBar>
-        {/* <NavBar></NavBar> */}
+        
       </div>
       <Script
         src="https://unpkg.com/ionicons@latest/dist/ionicons.js"
