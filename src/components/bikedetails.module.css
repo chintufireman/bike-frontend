@@ -1,0 +1,38 @@
+.outer_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid red;
+}
+.inner_container {
+  margin: 100px;
+  display: grid;
+  /* border: 2px solid black; */
+  height: 100%;
+  width: 100%;
+  grid-template-columns: auto;
+  grid-template-rows: 5fr 10fr 5fr;
+}
+
+.header {
+  
+  font-family: "Courier New", Courier, monospace;
+  font-size: 2em;
+  /* border: 2px solid blue; */
+}
+
+.info {
+  display: grid;
+  /* border: 2px solid black; */
+  grid-template-columns: 5fr 5fr;
+  column-gap: 1px;
+  row-gap: 5px;
+}
+
+.info img {
+  border: 3px solid gray;
+}
+
+.price {
+  border: 2px solid grey;
+}
