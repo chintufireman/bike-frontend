@@ -3,15 +3,16 @@
   align-items: center;
   justify-content: center;
   border: 2px solid red;
+
 }
 .inner_container {
   margin: 100px;
   display: grid;
-  /* border: 2px solid black; */
+  border: 2px solid black;
   height: 100%;
   width: 100%;
   grid-template-columns: auto;
-  grid-template-rows: 5fr 10fr 5fr;
+  grid-template-rows: 10% auto auto auto;
 }
 
 .header {
@@ -23,16 +24,63 @@
 
 .info {
   display: grid;
-  /* border: 2px solid black; */
+  border: 2px solid yellow;
   grid-template-columns: 5fr 5fr;
+  grid-template-rows: 5fr;
   column-gap: 1px;
   row-gap: 5px;
+  height: 326px;
 }
 
 .info img {
   border: 3px solid gray;
 }
 
-.price {
+.price_varient {
   border: 2px solid grey;
+  display: grid;
+  grid-template-rows: 5fr 15fr;
+}
+.price_varient div:nth-child(1){
+  display: flex;
+  border-bottom: 1px solid grey;
+  align-items: center;
+  justify-content: center;
+}
+.price_varient div:nth-child(2){
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.specs_features{
+  display: grid;
+  grid-template-rows: 10fr 10fr;
+  border: 2px solid grey;
+  margin-top: 100px;
+}
+.specs{
+  margin-top: 10px;
+  background: rgb(209, 207, 207);
+  /* border: 2px solid red; */
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+}
+.specs_table table tr{
+  height: 50px;
+  border: 0.5px solid grey;
+}
+.specs_table table tr td{
+    /* border: 0.5px solid black; */
+    padding-left: 10px;
+    vertical-align: middle;
+}
+.specs_table table tr th{
+  text-align: left;
+}
+.specs_table table{
+  width: 100%;
 }
