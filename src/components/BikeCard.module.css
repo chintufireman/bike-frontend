@@ -6,9 +6,11 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  
 }
 
 .card {
+  /* flex: 2; */
   margin: 20px;
   border: 2px solid black;
   height: 400px;
