@@ -1,5 +1,5 @@
 "use client";
-import BikeCard from "@/components/InnovativeCard";
+import BikeCard from "@/components/BikeCard";
 import BikeDetails from "@/components/BikeDetails";
 import NavBar from "@/components/NavBar";
 import SideBar from "@/components/SideBar";
@@ -12,6 +12,7 @@ const Page = () => {
         {/* <NavBar></NavBar> */}
         {/* <SideBar></SideBar> */}
         {/* <BikeDetails /> */}
+        <BikeCard />
       </div>
       <Script
         src="https://unpkg.com/ionicons@latest/dist/ionicons.js"

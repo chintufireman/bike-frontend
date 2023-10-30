@@ -1,0 +1,56 @@
+.container {
+  border: 2px solid red;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 20px;
+  border: 2px solid black;
+  height: 400px;
+  width: 350px;
+  background: rgba(231, 226, 226, 0.911);
+}
+.title {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-style: italic;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: large;
+  line-height: 2em;
+ 
+}
+
+.price{
+    display: flex;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+    line-height: 2em;
+    font-weight: bolder;
+}
+.price span{
+    margin-left: 2px;
+    font-weight: lighter;
+    font-size: smaller;
+}
+.button{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button button{
+    background: black;
+    border-radius: 5px;
+    width: 5em;
+    size: 20px;
+    cursor: pointer;
+    color: white;
+}
