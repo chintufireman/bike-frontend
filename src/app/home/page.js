@@ -4,13 +4,14 @@ import BikeDetails from "@/components/BikeDetails";
 import NavBar from "@/components/NavBar";
 import SideBar from "@/components/SideBar";
 import Script from "next/script";
+import styles from "./home.module.css";
 
 const Page = () => {
   return (
     <>
-      <div className="">
-        {/* <NavBar></NavBar> */}
-        {/* <SideBar></SideBar> */}
+      <div className={`${styles.container}`}>
+        <NavBar></NavBar>
+        <SideBar></SideBar>
         {/* <BikeDetails /> */}
         <BikeCard />
       </div>
