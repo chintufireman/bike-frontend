@@ -1,0 +1,217 @@
+[
+  {
+    "id": "name",
+    "label": "Bike Name",
+    "description": "The name of the bike."
+  },
+  {
+    "id": "price",
+    "label": "Price",
+    "description": "The price of the bike."
+  },
+  {
+    "id": "colour",
+    "label": "Colour",
+    "description": "The color of the bike."
+  },
+  {
+    "id": "displacement",
+    "label": "Displacement",
+    "description": "The engine displacement of the bike."
+  },
+  {
+    "id": "mileage",
+    "label": "Mileage",
+    "description": "The mileage of the bike."
+  },
+  {
+    "id": "weight",
+    "label": "Weight",
+    "description": "The weight of the bike."
+  },
+  {
+    "id": "fuel",
+    "label": "Fuel Capacity",
+    "description": "The fuel tank capacity of the bike."
+  },
+  {
+    "id": "seatHeight",
+    "label": "Seat Height",
+    "description": "The seat height of the bike."
+  },
+  {
+    "id": "summary",
+    "label": "Summary",
+    "description": "A summary of the bike."
+  },
+  {
+    "id": "power",
+    "label": "Max Power",
+    "description": "The maximum power output of the bike's engine."
+  },
+  {
+    "id": "torque",
+    "label": "Max Torque",
+    "description": "The maximum torque output of the bike's engine."
+  },
+  {
+    "id": "frontSuspension",
+    "label": "Front Suspension",
+    "description": "Details about the front suspension."
+  },
+  {
+    "id": "rearSuspension",
+    "label": "Rear Suspension",
+    "description": "Details about the rear suspension."
+  },
+  {
+    "id": "brakingSystem",
+    "label": "Braking System",
+    "description": "Details about the braking system."
+  },
+  {
+    "id": "frontBrakeType",
+    "label": "Front Brake Type",
+    "description": "Details about the front brake type."
+  },
+  {
+    "id": "frontBrakeSize",
+    "label": "Front Brake Size",
+    "description": "Details about the front brake size."
+  },
+  {
+    "id": "rearBrakeType",
+    "label": "Rear Brake Type",
+    "description": "Details about the rear brake type."
+  },
+  {
+    "id": "rearBrakeSize",
+    "label": "Rear Brake Size",
+    "description": "Details about the rear brake size."
+  },
+  {
+    "id": "calliperType",
+    "label": "Calliper Type",
+    "description": "Details about the calliper type."
+  },
+  {
+    "id": "wheelType",
+    "label": "Wheel Type",
+    "description": "Details about the wheel type."
+  },
+  {
+    "id": "frontWheelSize",
+    "label": "Front Wheel Size",
+    "description": "Details about the front wheel size."
+  },
+  {
+    "id": "rearWheelSize",
+    "label": "Rear Wheel Size",
+    "description": "Details about the rear wheel size."
+  },
+  {
+    "id": "frontTyreSize",
+    "label": "Front Tyre Size",
+    "description": "Details about the front tire size."
+  },
+  {
+    "id": "rearTyreSize",
+    "label": "Rear Tyre Size",
+    "description": "Details about the rear tire size."
+  },
+  {
+    "id": "tyreType",
+    "label": "Tyre Type",
+    "description": "Details about the tire type."
+  },
+  {
+    "id": "radialTyres",
+    "label": "Radial Tyres",
+    "description": "Details about radial tires."
+  },
+  {
+    "id": "frontTyrePressureRider",
+    "label": "Front Tyre Pressure (Rider)",
+    "description": "Front tire pressure for the rider."
+  },
+  {
+    "id": "rearTyrePressureRider",
+    "label": "Rear Tyre Pressure (Rider)",
+    "description": "Rear tire pressure for the rider."
+  },
+  {
+    "id": "frontTyrePressureRiderPillion",
+    "label": "Front Tyre Pressure (Rider & Pillion)",
+    "description": "Front tire pressure for the rider and pillion."
+  },
+  {
+    "id": "rearTyrePressureRiderPillion",
+    "label": "Rear Tyre Pressure (Rider & Pillion)",
+    "description": "Rear tire pressure for the rider and pillion."
+  },
+  {
+    "id": "kerbWeight",
+    "label": "Kerb Weight",
+    "description": "The kerb weight of the bike."
+  },
+  {
+    "id": "groundClearance",
+    "label": "Ground Clearance",
+    "description": "The ground clearance of the bike."
+  },
+  {
+    "id": "overallLength",
+    "label": "Overall Length",
+    "description": "The overall length of the bike."
+  },
+  {
+    "id": "overallWidth",
+    "label": "Overall Width",
+    "description": "The overall width of the bike."
+  },
+  {
+    "id": "overallHeight",
+    "label": "Overall Height",
+    "description": "The overall height of the bike."
+  },
+  {
+    "id": "wheelbase",
+    "label": "Wheelbase",
+    "description": "The wheelbase of the bike."
+  },
+  {
+    "id": "chassisType",
+    "label": "Chassis Type",
+    "description": "Details about the chassis type."
+  },
+  {
+    "id": "odometer",
+    "label": "Odometer",
+    "description": "Details about the bike's odometer."
+  },
+  {
+    "id": "speedometer",
+    "label": "Speedometer",
+    "description": "Details about the bike's speedometer."
+  },
+  {
+    "id": "fuelGauge",
+    "label": "Fuel Gauge",
+    "description": "Details about the bike's fuel gauge."
+  },
+  {
+    "id": "digitalFuelGauge",
+    "label": "Digital Fuel Gauge",
+    "description": "Details about the digital fuel gauge."
+  },
+  {
+    "id": "tachometer",
+    "label": "Tachometer",
+    "description": "Details about the bike's tachometer."
+  },
+  {
+    "id": "standAlarm",
+    "label": "Stand Alarm",
+    "description": "Details about the bike's stand alarm."
+  }
+]
