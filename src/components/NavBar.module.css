@@ -1,5 +1,6 @@
 .outer_container{
-    background: #4d5bf9;
+    
+    background: black;
     height: 100px;
     width: 100%;
     margin: 0px;
@@ -11,6 +12,7 @@
 }
 .inner_container{
     /* border: 2px solid black; */
+    
     margin: 2px;
     padding: 2px;
     width: 100%;
@@ -27,10 +29,10 @@
 }
 .outer_container .inner_container nav ul li{
     font-size: 1.5em;
-    color: black;
+    color: #ffffff;
     transition: 0.5s;
     cursor: pointer;
 }
 .outer_container .inner_container nav ul li:hover{
-    background: green;
+    background: rgb(140, 144, 140);
 }

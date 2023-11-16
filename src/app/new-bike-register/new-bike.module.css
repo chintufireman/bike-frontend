@@ -24,3 +24,8 @@
   height: 5em;
   border-radius: 30px;
 }
+
+.file{
+  margin-bottom: 100px;
+  border: 2px solid black;
+}

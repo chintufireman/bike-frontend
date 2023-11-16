@@ -3,10 +3,31 @@
 import styles from "./new-bike.module.css";
 import { useEffect, useState } from "react";
 import bikeAttributesData from "../../../utils/BikeAttributes.json";
+import { stringify } from "postcss";
 
 const Page = () => {
   const [bikeAttributes, setBikeAttributes] = useState(bikeAttributesData);
   const [formData, setFormData] = useState({});
+  const [imageData, setImageData] = useState({});
+
+  const handleImageFile = (e) => {
+    // console.log(e.target.files[0]);
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function (event) {
+        console.log(event.target.result);
+        const byteArray = new Uint8Array(event.target.result);
+        console.log(byteArray);
+        setImageData({
+          image: {
+            Data: byteArray,
+          },
+        });
+      };
+      reader.readAsArrayBuffer(file);
+    }
+  };
 
   const handleInputChange = (e) => {
     const { id, value } = e.target;
@@ -18,6 +39,7 @@ const Page = () => {
       const value = formData[attribute.id] || "";
       return value.trim() === ""; // You can add additional validation if needed
     });
+
     isEmptyField = false;
     if (isEmptyField) {
       alert("Please fill in all the fields before submitting.");
@@ -46,8 +68,8 @@ const Page = () => {
         });
     }
   };
-
-  useEffect(() => {}, [formData]);
+  const handleFile = () => {};
+  useEffect(() => {}, [formData, imageData]);
 
   return (
     <>
@@ -66,6 +88,16 @@ const Page = () => {
             />
           </div>
         ))}
+      </div>
+      <div>
+        <input
+          className={`${styles.file}`}
+          id="image"
+          name="image"
+          type="file"
+          onChange={handleImageFile}
+        />
+        <button type="submit">Upload Image</button>
       </div>
       <div className={`${styles.button}`}>
         <button type="submit" onClick={handleSubmit}>
