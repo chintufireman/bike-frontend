@@ -8,25 +8,11 @@ import { stringify } from "postcss";
 const Page = () => {
   const [bikeAttributes, setBikeAttributes] = useState(bikeAttributesData);
   const [formData, setFormData] = useState({});
-  const [imageData, setImageData] = useState({});
+  const [imageData, setImageData] = useState(null);
 
   const handleImageFile = (e) => {
-    // console.log(e.target.files[0]);
     const file = e.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = function (event) {
-        console.log(event.target.result);
-        const byteArray = new Uint8Array(event.target.result);
-        console.log(byteArray);
-        setImageData({
-          image: {
-            Data: byteArray,
-          },
-        });
-      };
-      reader.readAsArrayBuffer(file);
-    }
+    setImageData(file);
   };
 
   const handleInputChange = (e) => {
@@ -46,30 +32,35 @@ const Page = () => {
     } else {
       console.log("FormData:", formData);
       // Form data is complete, so let's send it to the server
+      //creating FormData object
+      const formDataObject = new FormData();
+      //now creating a blob 
+      // const jsonBlob=new Blob(JSON.stringify(formData), {type:"application/json;charset=utf-8"})
+      formDataObject.append("jsonField",JSON.stringify(formData))
+      //append image file
+      formDataObject.append("image",imageData)
+
+      // Multipart Form data is complete, so let's send it to the server
       fetch("http://localhost:9090/new-bike", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
+        body: formDataObject,
       })
         .then((response) => {
           if (response.ok) {
-            // The request was successful, you can handle success here
             console.log("Form data submitted successfully!");
           } else {
-            // Handle the case where the server returned an error
             console.log("Error submitting form data.");
           }
         })
         .catch((error) => {
-          // Handle network errors or other issues here
           console.error("An error occurred while submitting form data:", error);
         });
     }
   };
-  const handleFile = () => {};
-  useEffect(() => {}, [formData, imageData]);
+
+  useEffect(() => {
+    console.log(formData);
+  }, [formData, imageData]);
 
   return (
     <>
@@ -109,3 +100,4 @@ const Page = () => {
 };
 
 export default Page;
+
