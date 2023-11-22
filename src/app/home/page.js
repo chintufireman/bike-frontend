@@ -1,28 +1,39 @@
-"use client";
 import BikeCard from "@/components/BikeCard";
 import BikeDetails from "@/components/BikeDetails";
 import NavBar from "@/components/NavBar";
 import SideBar from "@/components/SideBar";
-import Script from "next/script";
 import styles from "./home.module.css";
 
-const Page = () => {
+export default async function Page() {
+  const data = await getServerSideProps();
+
   return (
     <>
       <div className={`${styles.container}`}>
         <NavBar></NavBar>
         <SideBar></SideBar>
         {/* <BikeDetails /> */}
-        <BikeCard />
+        <BikeCard imageBlob={data} />
       </div>
-      <Script
-        src="https://unpkg.com/ionicons@latest/dist/ionicons.js"
-        onLoad={() => {
-          console.log("Script has loaded");
-        }}
-      />
     </>
   );
-};
+}
 
-export default Page;
+/*
+1.By exporting getServerSideProps, you are telling Next.js 
+that it should run this function on the server side and 
+fetch the required data before rendering the page.
+
+2.The result of this function is then passed as props to your page component, 
+allowing you to use the fetched data in your component.
+*/
+async function getServerSideProps() {
+  const response = await fetch("http://localhost:9090/fetch-all");
+  //this wont work will give error of response cannot be cached to large
+  //to handle so use cache:'no-store'
+  const data = await response.json();
+  // console.log(data);
+  return data;
+}
+
+// export default Page;

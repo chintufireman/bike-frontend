@@ -34,8 +34,6 @@ const Page = () => {
       // Form data is complete, so let's send it to the server
       //creating FormData object
       const formDataObject = new FormData();
-      //now creating a blob 
-      // const jsonBlob=new Blob(JSON.stringify(formData), {type:"application/json;charset=utf-8"})
       formDataObject.append("jsonField",JSON.stringify(formData))
       //append image file
       formDataObject.append("image",imageData)

@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import style from "./sidebar.module.css";
+import Script from "next/script";
 // import { IonIcon } from 'ionicons';
 // import { logoApple } from 'ionicons/icons';
 const SideBar = () => {
@@ -31,6 +32,12 @@ const SideBar = () => {
 
   return (
     <>
+      <Script
+        src="https://unpkg.com/ionicons@latest/dist/ionicons.js"
+        onLoad={() => {
+          console.log("Script has loaded");
+        }}
+      />
       <div className={`${style.toggle}`} onClick={handleToggle}>
         <ion-icon name="menu" class={`${style.open}`} />
         <ion-icon name="close-circle-outline" class={`${style.close}`} />
