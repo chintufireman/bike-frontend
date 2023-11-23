@@ -1,7 +1,7 @@
 .outer_container{
     
     background: black;
-    height: 100px;
+    height: 55px;
     width: 100%;
     margin: 0px;
     padding: 0px;
@@ -28,7 +28,7 @@
     align-items: center;
 }
 .outer_container .inner_container nav ul li{
-    font-size: 1.5em;
+    font-size: 1.0em;
     color: #ffffff;
     transition: 0.5s;
     cursor: pointer;
