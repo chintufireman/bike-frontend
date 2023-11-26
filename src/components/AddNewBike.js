@@ -1,13 +1,10 @@
 "use client";
 
-import styles from "./new-bike.module.css";
 import { useEffect, useState } from "react";
-import bikeAttributesData from "../../../utils/BikeAttributes.json";
-import { stringify } from "postcss";
-import NavBar from "@/components/NavBar";
-import SideBar from "@/components/SideBar";
+import bikeAttributesData from "../../utils/BikeAttributes.json";
+import styles from "./addnewbike.module.css";
 
-const Page = () => {
+const AddNewBike = () => {
   const [bikeAttributes, setBikeAttributes] = useState(bikeAttributesData);
   const [formData, setFormData] = useState({});
   const [imageData, setImageData] = useState(null);
@@ -64,43 +61,40 @@ const Page = () => {
 
   return (
     <>
-      <div className={`${styles.container}`}>
-        {/* <NavBar /> */}
-        <div className={`grid grid-cols-2 gap-4 `}>
-          {bikeAttributes.map((attribute) => (
-            <div className="flex flex-col" key={attribute.id}>
-              <label htmlFor={attribute.id} className="mb-2 text-white-600">
-                {attribute.label}
-              </label>
-              <input
-                type="text"
-                id={attribute.id}
-                className="border rounded p-2"
-                value={formData[attribute.id] || ""}
-                onChange={handleInputChange}
-              />
-            </div>
-          ))}
-        </div>
-        <div>
-          <input
-            className={`${styles.file}`}
-            id="image"
-            name="image"
-            type="file"
-            onChange={handleImageFile}
-          />
-          <button type="submit">Upload Image</button>
-        </div>
-        <div className={`${styles.button}`}>
-          <button type="submit" onClick={handleSubmit}>
-            Submit
-          </button>
-        </div>
-        {/* <SideBar /> */}
+      <div className="grid grid-cols-2 gap-4">
+        {bikeAttributes.map((attribute) => (
+          <div className="flex flex-col" key={attribute.id}>
+            <label htmlFor={attribute.id} className="mb-2 text-white-600">
+              {attribute.label}
+            </label>
+            <input
+              type="text"
+              id={attribute.id}
+              className="border rounded p-2"
+              value={formData[attribute.id] || ""}
+              onChange={handleInputChange}
+            />
+          </div>
+        ))}
       </div>
+      <div>
+        <input
+          className={`${styles.file}`}
+          id="image"
+          name="image"
+          type="file"
+          onChange={handleImageFile}
+        />
+        <button type="submit">Upload Image</button>
+      </div>
+      <div className={`${styles.button}`}>
+        <button type="submit" onClick={handleSubmit}>
+          Submit
+        </button>
+      </div>
+      {/* <SideBar /> */}
     </>
   );
 };
 
-export default Page;
+export default AddNewBike;

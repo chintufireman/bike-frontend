@@ -12,7 +12,7 @@
 .card {
   /* flex: 2; */
   margin: 20px;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   height: 400px;
   width: 350px;
   background: rgba(231, 226, 226, 0.911);

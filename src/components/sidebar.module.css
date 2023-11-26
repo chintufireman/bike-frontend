@@ -1,16 +1,19 @@
 .outer_container {
   display: flex;
-  /* border: 2px solid black; */
+  /* border: 2px solid blue; */
   height: 100%;
   min-height: 100vh;
+  width: 71px;
+  position: fixed;
 }
 .inner_container {
   display: flex;
-  /* border: 2px solid black; */
+  /* border: 20px solid green; */
   top: 0px;
   left: 0px;
   bottom: 20px;
-  position: fixed;
+  position: fixed;/*important try to comment this and then use 
+  toggle see why it doesnot work when position:fixed is used */
   background: black;
   box-sizing: initial;
   border-radius: 10px;
@@ -134,6 +137,7 @@
 }
 
 .toggle {
+  
   position: fixed;
   top: 10px;
   right: 20px;

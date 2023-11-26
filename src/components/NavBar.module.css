@@ -1,5 +1,5 @@
 .outer_container{
-    
+    /* border: 2px solid green; */
     background: black;
     height: 55px;
     width: 100%;
@@ -27,7 +27,7 @@
     justify-content: space-around;
     align-items: center;
 }
-.outer_container .inner_container nav ul li{
+.outer_container .inner_container nav ul {
     font-size: 1.0em;
     color: #ffffff;
     transition: 0.5s;

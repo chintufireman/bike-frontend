@@ -23,6 +23,7 @@ const SideBar = () => {
   };
 
   const handleToggle = (event) => {
+    console.log("hi");
     let menuToggle = document.querySelector(`.${style.toggle}`);
     let inner_container = document.querySelector(`.${style.inner_container}`);
 

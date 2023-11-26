@@ -5,15 +5,16 @@ import SideBar from "@/components/SideBar";
 import styles from "./home.module.css";
 
 export default async function Page() {
-  // const data = await getServerSideProps();
-
+  const data = await getServerSideProps();
+  // const data = null;
   return (
     <>
       <div className={`${styles.container}`}>
         <NavBar></NavBar>
+        <BikeCard imageBlob={data} />
         <SideBar></SideBar>
         {/* <BikeDetails /> */}
-        <BikeCard />
+
         {/* imageBlob={data}  */}
       </div>
     </>
@@ -29,7 +30,9 @@ fetch the required data before rendering the page.
 allowing you to use the fetched data in your component.
 */
 async function getServerSideProps() {
-  const response = await fetch("http://localhost:9090/fetch-all",{cache:"no-store"});
+  const response = await fetch("http://localhost:9090/fetch-all", {
+    cache: "no-store",
+  });
   //this wont work will give error of response cannot be cached to large
   //to handle so use cache:'no-store'
   const data = await response.json();

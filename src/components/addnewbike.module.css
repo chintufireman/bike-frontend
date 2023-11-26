@@ -1,0 +1,31 @@
+.button {
+    margin-top: 7%;
+    display: flex;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button button:hover {
+    background: black;
+    color: white;
+  }
+  
+  .button button:active {
+    background: red;
+  }
+  
+  .button button {
+    background: green;
+    color: white;
+    width: 8em;
+    height: 5em;
+    border-radius: 30px;
+  }
+  
+  .file{
+    margin-bottom: 100px;
+    border: 2px solid black;
+  }
