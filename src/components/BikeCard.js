@@ -3,9 +3,10 @@ import { useEffect, useState } from "react";
 import styles from "./BikeCard.module.css";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-const BikeCard = ({ imageBlob }) => {
-  const [imageUrl, setImageUrl] = useState([]);
+
+const BikeCard = () => {
   const [bikeData, setBikeData] = useState([]);
+
   const router = useRouter();
 
   // Convert the image blob to a data URL
@@ -19,10 +20,9 @@ const BikeCard = ({ imageBlob }) => {
 
     const byteArray = new Uint8Array(byteNumbers);
     const newblob = new Blob([byteArray], { type: "image/jpeg" });
-    console.log(newblob);
+    // console.log(newblob);
     const reader = new FileReader();
     reader.onloadend = () => {
-      // setImageUrl((prevImageUrls) => [...prevImageUrls, reader.result]);
       const updatedBike = {
         ...bike,
         Image: {
@@ -32,17 +32,33 @@ const BikeCard = ({ imageBlob }) => {
       setBikeData((prevBikeData) => [...prevBikeData, updatedBike]);
     };
     reader.readAsDataURL(newblob);
-    // console.log(reader);
   };
 
   useEffect(() => {
-    console.log(bikeData);
-    if (imageBlob) {
-      imageBlob.forEach((data) => {
-        convertBlobToDataURL(data);
-      });
-    }
-  }, [imageBlob]);
+    const fetchCardDetails = async () => {
+
+      if (process.env.NODE_ENV === 'development') {
+        console.log = () => {};
+      }
+      
+      try {
+        const response = await fetch("http://localhost:9090/fetch-all", {
+          cache: "no-store",
+        });
+        const cardInfoFromServer = await response.json();
+        // console.log(cardInfoFromServer);
+
+        // Move the imageBlob processing inside the fetchCardDetails function
+        cardInfoFromServer.forEach((data) => {
+          // console.log(data);
+          convertBlobToDataURL(data);
+        });
+      } catch (error) {
+        console.error("error in fetching card data", error);
+      }
+    };
+    fetchCardDetails();
+  }, []); // Empty dependency array ensures the effect runs once on mount
 
   return (
     <div className={`${styles.container}`}>
