@@ -1,15 +1,19 @@
 #base image
-FROM node:18-alpine
+FROM node:18-alpine AS build
 
-RUN mkdir -p /usr/app/
-WORKDIR /usr/app
+WORKDIR /app
 
-#copy from current directory to working directory that is /usr/app/
+#copy from current directory to working directory that is /app/
 COPY ./ ./
-
 
 RUN npm install
 RUN npm run build
+
+FROM node:18-alpine
+
+WORKDIR /app
+
+COPY --from=build /app .
 
 EXPOSE 3000
 CMD [ "npm", "start" ]
