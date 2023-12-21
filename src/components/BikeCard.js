@@ -2,15 +2,14 @@
 import { useEffect, useState } from "react";
 import styles from "./BikeCard.module.css";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const BikeCard = () => {
   const [bikeData, setBikeData] = useState([]);
 
-  const router = useRouter();
-
   // Convert the image blob to a data URL
   const convertBlobToDataURL = (bike) => {
+    // console.log(bike);
     const byteCharacters = atob(bike.Image.Data);
     const byteNumbers = new Array(byteCharacters.length);
 
@@ -20,7 +19,7 @@ const BikeCard = () => {
 
     const byteArray = new Uint8Array(byteNumbers);
     const newblob = new Blob([byteArray], { type: "image/jpeg" });
-    // console.log(newblob);
+
     const reader = new FileReader();
     reader.onloadend = () => {
       const updatedBike = {
@@ -36,11 +35,10 @@ const BikeCard = () => {
 
   useEffect(() => {
     const fetchCardDetails = async () => {
-
-      if (process.env.NODE_ENV === 'development') {
+      if (process.env.NODE_ENV === "development") {
         console.log = () => {};
       }
-      
+
       try {
         const response = await fetch("http://localhost:9090/fetch-all", {
           cache: "no-store",
@@ -78,13 +76,25 @@ const BikeCard = () => {
             {/* Replace with actual price attribute */}
           </div>
           <div className={`${styles.button}`}>
-            <button
+            <Link
+              href={{
+                pathname: `/bike-info/${bike.name}`,
+                // query: { bikename: `${bike.name}`, bikeprice: `${bike.price}` },
+              }}
+            >
+              <button>More details</button>
+            </Link>
+            {/*
+            had to remove because not able to fetch data
+             <button
               onClick={() => {
-                router.push("/bike-info");
+                router.push({
+                  
+                });
               }}
             >
               More Details
-            </button>
+            </button> */}
           </div>
         </div>
       ))}

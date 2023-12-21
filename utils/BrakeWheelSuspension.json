@@ -1,0 +1,97 @@
+[
+  {
+    "id": "frontSuspension",
+    "label": "Front Suspension",
+    "description": "The name of the bike."
+  },
+  {
+    "id": "rearSuspension",
+    "label": "Rear Suspension",
+    "description": "The name Max Power of bike."
+  },
+  {
+    "id": "brakingSystem",
+    "label": "Braking System",
+    "description": "The name of the bike."
+  },
+  {
+    "id": "frontBrakeType",
+    "label": "Front Brake Type",
+    "description": "The name of the bike."
+  },
+  {
+    "id": "frontBrakeSize",
+    "label": "Front Brake Size",
+    "description": "The name of the bike."
+  },
+  {
+    "id": "rearBrakeType",
+    "label": "Rear Brake Type",
+    "description": "The name of the bike."
+  },
+  {
+    "id": "rearBrakeSize",
+    "label": "Rear Brake Size",
+    "description": "The name of the bike."
+  },
+  {
+    "id": "calliperType",
+    "label": "Calliper Type",
+    "description": "The name of the bike."
+  },
+  {
+    "id": "wheelType",
+    "label": "Wheel Type",
+    "description": "The name of the bike."
+  },
+  {
+    "id": "frontWheelSize",
+    "label": "Front Wheel Size",
+    "description": "The name of the bike."
+  },
+  {
+    "id": "rearWheelSize",
+    "label": "Rear Wheel Size",
+    "description": "The name of the bike."
+  },
+  {
+    "id": "frontTyreSize",
+    "label": "Front Tyre Size",
+    "description": "The name of the bike."
+  },
+  {
+    "id": "rearTyreSize",
+    "label": "Rear Tyre Size",
+    "description": "The name of the bike."
+  },
+  {
+    "id": "tyreType",
+    "label": "Tyre Type",
+    "description": "The name of the bike."
+  },
+  {
+    "id": "radialTyres",
+    "label": "Radial Tyres",
+    "description": "The name of the bike."
+  },
+  {
+    "id": "frontTyrePressureRider",
+    "label": "Front Tyre Pressure (Rider)",
+    "description": "The name of the bike."
+  },
+  {
+    "id": "rearTyrePressureRider",
+    "label": "Rear Tyre Pressure (Rider)",
+    "description": "The name of the bike."
+  },
+  {
+    "id": "frontTyrePressureRiderPillion",
+    "label": "Front Tyre Pressure (Rider & Pillion)",
+    "description": "The name of the bike."
+  },
+  {
+    "id": "rearTyrePressureRiderPillion",
+    "label": "Rear Tyre Pressure (Rider & Pillion)",
+    "description": "The name of the bike."
+  }
+]

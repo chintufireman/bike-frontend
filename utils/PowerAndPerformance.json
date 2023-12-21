@@ -1,0 +1,127 @@
+[
+  {
+    "id": "displacement",
+    "label": "Displacement",
+    "description": "The name of the bike."
+  },
+  {
+    "id": "maxPower",
+    "label": "Max Power",
+    "description": "The name Max Power of bike."
+  },
+  {
+    "id": "maxTorque",
+    "label": "Max Torque",
+    "description": "The name of the bike."
+  },
+  {
+    "id": "mileageARAI",
+    "label": "Mileage - ARAI",
+    "description": "The name of the bike."
+  },
+  {
+    "id": "mileageOwnerReported",
+    "label": "Mileage - Owner Reported",
+    "description": "The name of the bike."
+  },
+  {
+    "id": "ridingRange",
+    "label": "Riding Range",
+    "description": "The name of the bike."
+  },
+  {
+    "id": "topSpeed",
+    "label": "Top Speed",
+    "description": "The name of the bike."
+  },
+  {
+    "id": "ridingModes",
+    "label": "Riding Modes",
+    "description": "The name of the bike."
+  },
+  {
+    "id": "transmission",
+    "label": "Transmission",
+    "description": "The name of the bike."
+  },
+  {
+    "id": "transmissionType",
+    "label": "Transmission Type",
+    "description": "The name of the bike."
+  },
+  {
+    "id": "gearShiftingPattern",
+    "label": "Gear Shifting Pattern",
+    "description": "The name of the bike."
+  },
+  {
+    "id": "cylinders",
+    "label": "Cylinders",
+    "description": "The name of the bike."
+  },
+  {
+    "id": "bore",
+    "label": "Bore",
+    "description": "The name of the bike."
+  },
+  {
+    "id": "stroke",
+    "label": "Stroke",
+    "description": "The name of the bike."
+  },
+  {
+    "id": "valvesPerCylinder",
+    "label": "Valves Per Cylinder",
+    "description": "The name of the bike."
+  },
+  {
+    "id": "compressionRatio",
+    "label": "Compression Ratio",
+    "description": "The name of the bike."
+  },
+  {
+    "id": "ignition",
+    "label": "Ignition",
+    "description": "The name of the bike."
+  },
+  {
+    "id": "sparkPlugs",
+    "label": "Spark Plugs",
+    "description": "The name of the bike."
+  },
+  {
+    "id": "coolingSystem",
+    "label": "Cooling System",
+    "description": "The name of the bike."
+  },
+  {
+    "id": "clutch",
+    "label": "Clutch",
+    "description": "The name of the bike."
+  },
+  {
+    "id": "fuelDeliverySystem",
+    "label": "Fuel Delivery System",
+    "description": "The name of the bike."
+  },
+  {
+    "id": "fuelTankCapacity",
+    "label": "Fuel Tank Capacity",
+    "description": "The name of the bike."
+  },
+  {
+    "id": "reserveFuelCapacity",
+    "label": "Reserve Fuel Capacity",
+    "description": "The name of the bike."
+  },
+  {
+    "id": "emissionStandard",
+    "label": "Emission Standard",
+    "description": "The name of the bike."
+  },
+  {
+    "id": "fuelType",
+    "label": "Fuel Type",
+    "description": "The name of the bike."
+  }
+]

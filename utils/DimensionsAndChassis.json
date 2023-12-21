@@ -1,0 +1,34 @@
+[
+  {
+    "id": "kerbWeight",
+    "label": "Kerb Weight"
+  },
+  {
+    "id": "seatHeight",
+    "label": "Seat Height"
+  },
+  {
+    "id": "groundClearance",
+    "label": "Ground Clearance"
+  },
+  {
+    "id": "overallLength",
+    "label": "Overall Length"
+  },
+  {
+    "id": "overallWidth",
+    "label": "Overall Width"
+  },
+  {
+    "id": "overallHeight",
+    "label": "Overall Height"
+  },
+  {
+    "id": "wheelbase",
+    "label": "Wheelbase"
+  },
+  {
+    "id": "chassisType",
+    "label": "Chassis Type"
+  }
+]

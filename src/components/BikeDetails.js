@@ -1,18 +1,46 @@
+"use client";
+import { useEffect, useState } from "react";
 import styles from "./bikedetails.module.css";
+import powerAndPerformance from "../../utils/PowerAndPerformance.json";
+import brakeWheelSuspension from "../../utils/BrakeWheelSuspension.json";
+import dimensionsAndChassis from "../../utils/DimensionsAndChassis.json";
+const BikeDetails = ({ bikeInfo }) => {
+  //query object has been removed and is replaced by new way of fetching useSearchParams
 
-const BikeDetails = () => {
+  const [imageUrl, setImageUrl] = useState("");
+
+  useEffect(() => {
+    convertBlobToDataURL(bikeInfo);
+    // console.log(powerAndPerformance);
+  }, []);
+
+  const convertBlobToDataURL = (bike) => {
+    const byteCharacters = atob(bike.Image.Data);
+    const byteNumbers = new Array(byteCharacters.length);
+
+    for (let i = 0; i < byteCharacters.length; i++) {
+      byteNumbers[i] = byteCharacters.charCodeAt(i);
+    }
+
+    const byteArray = new Uint8Array(byteNumbers);
+    const newblob = new Blob([byteArray], { type: "image/jpeg" });
+
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      setImageUrl(reader.result);
+    };
+    reader.readAsDataURL(newblob);
+  };
+
   return (
     <div className={`${styles.outer_container}`}>
       <div className={`${styles.inner_container}`}>
-        <h1 className={`${styles.header}`}>Tvs raider</h1>
+        <h1 className={`${styles.header}`}>{bikeInfo.name}</h1>
         <div className={`${styles.image}`}>
-          <img
-            src="https://imgd.aeplcdn.com/1280x720/n/cw/ec/144907/tvs-raider-125-left-rear-three-quarter3.jpeg?isig=0&wm=3"
-            alt=""
-          />
+          <img src={imageUrl} alt="" />
         </div>
         <div className={`${styles.varient}`}>Varient single disc</div>
-        <div className={`${styles.price}`}>Price</div>
+        <div className={`${styles.price}`}>{bikeInfo.price}</div>
         <div className={`${styles.header}`}>
           Raider 125 Specifications & Features
         </div>
@@ -23,18 +51,30 @@ const BikeDetails = () => {
               <tr>
                 <th>Power and Performance</th>
               </tr>
+              {powerAndPerformance.map((attribute) => (
+                <tr key={attribute.id}>
+                  <td>{attribute.label}</td>
+                  <td>{bikeInfo[attribute.id]}</td>
+                </tr>
+              ))}
               <tr>
-                <td>Displacement</td>
-                <td>124.8 cc</td>
+                <th>Brakes, Wheels & Suspension</th>
               </tr>
+              {brakeWheelSuspension.map((attribute) => (
+                <tr key={attribute.id}>
+                  <td>{attribute.label}</td>
+                  <td>{bikeInfo[attribute.id]}</td>
+                </tr>
+              ))}
               <tr>
-                <td>Max Power</td>
-                <td>11.2 bhp @ 7500 rpm</td>
+                <th>Dimensions & Chassis</th>
               </tr>
-              <tr>
-                <td>Max Torque</td>
-                <td>11.2 Nm @ 6000 rpm</td>
-              </tr>
+              {dimensionsAndChassis.map((attribute) => (
+                <tr key={attribute.id}>
+                  <td>{attribute.label}</td>
+                  <td>{bikeInfo[attribute.id]}</td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
