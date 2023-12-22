@@ -29,4 +29,12 @@
   margin-bottom: 100px;
   border: 2px solid black;
 }
+.container{
+  background: rgb(195, 185, 185);
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-wrap: wrap;
+  /* border: 2px solid black; */
+}
 

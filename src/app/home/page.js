@@ -1,5 +1,4 @@
 import BikeCard from "@/components/BikeCard";
-import BikeDetails from "@/components/BikeDetails";
 import NavBar from "@/components/NavBar";
 import SideBar from "@/components/SideBar";
 import styles from "./home.module.css";
@@ -13,9 +12,6 @@ export default async function Page() {
         <NavBar></NavBar>
         <BikeCard />
         <SideBar></SideBar>
-        {/* <BikeDetails /> */}
-
-        {/* imageBlob={data}  */}
       </div>
     </>
   );

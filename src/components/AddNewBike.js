@@ -60,7 +60,7 @@ const AddNewBike = () => {
   }, [formData, imageData]);
 
   return (
-    <>
+    <div className={`${styles.container}`}>
       <div className="grid grid-cols-2 gap-4">
         {bikeAttributes.map((attribute) => (
           <div className="flex flex-col" key={attribute.id}>
@@ -92,8 +92,7 @@ const AddNewBike = () => {
           Submit
         </button>
       </div>
-      {/* <SideBar /> */}
-    </>
+    </div>
   );
 };
 
