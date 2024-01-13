@@ -40,7 +40,7 @@ const BikeCard = () => {
       }
 
       try {
-        const response = await fetch("http://localhost:9090/fetch-all", {
+        const response = await fetch("http://172.105.36.88:9090/fetch-all", {
           cache: "no-store",
         });
         const cardInfoFromServer = await response.json();
