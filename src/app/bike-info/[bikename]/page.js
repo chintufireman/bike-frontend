@@ -21,8 +21,9 @@ const page = async ({ params }) => {
 async function getSingleBikeData(bikename) {
   // Fetch data from external API
   console.log("Bike name ", bikename);
+  const host = process.env.NEXT_PUBLIC_HOST
   const res = await fetch(
-    `http://localhost:9090/fetch-bike?bikename=${bikename}`,
+    `${process.env.NEXT_PUBLIC_HOST}/fetch-bike?bikename=${bikename}`,
     {
       cache: "no-store",
     }

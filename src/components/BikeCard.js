@@ -35,12 +35,8 @@ const BikeCard = () => {
 
   useEffect(() => {
     const fetchCardDetails = async () => {
-      if (process.env.NODE_ENV === "development") {
-        console.log = () => {};
-      }
-
       try {
-        const response = await fetch("http://172.105.36.88:9090/fetch-all", {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_HOST}/fetch-all`, {
           cache: "no-store",
         });
         const cardInfoFromServer = await response.json();

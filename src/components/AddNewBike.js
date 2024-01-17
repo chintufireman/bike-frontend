@@ -38,7 +38,7 @@ const AddNewBike = () => {
       formDataObject.append("image", imageData);
 
       // Multipart Form data is complete, so let's send it to the server
-      fetch("http://localhost:9090/new-bike", {
+      fetch(`${process.env.NEXT_PUBLIC_HOST}/new-bike`, {
         method: "POST",
         body: formDataObject,
       })
